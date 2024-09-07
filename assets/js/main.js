@@ -209,3 +209,25 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+// modal javaScript
+  document.getElementById('openSignUp').addEventListener('click', function(e) {
+    e.preventDefault();
+    fadeOutIn('#modalLoginContent', '#modalSignUpContent', 'SignUp');
+  });
+
+  document.getElementById('backToLogin').addEventListener('click', function(e) {
+    e.preventDefault();
+    fadeOutIn('#modalSignUpContent', '#modalLoginContent', 'Login');
+  });
+
+  function fadeOutIn(fadeOutId, fadeInId, newTitle) {
+    // Fade out the current content
+    $(fadeOutId).fadeOut(300, function() {
+      // Change modal title
+      document.getElementById('modalTitleId').innerText = newTitle;
+
+      // Fade in the new content
+      $(fadeInId).fadeIn(300);
+    });
+  }
+

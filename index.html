@@ -54,14 +54,13 @@
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Blog</a></li>
+          <li><a href="#services">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
+      <a class="btn-getstarted" data-bs-toggle="modal" data-bs-target="#loginModal">Get Started</a>
     </div>
   </header>
 
@@ -144,8 +143,7 @@
               </h3>
             </div>
           </div>
-          <div class="row justify-content-center mb-3"><a href="#" class="btn btn-primary col-xl-1 col-md-1">let's
-              go</a></div>
+          <div class="row justify-content-center mb-3"><a href="#" class="lets-begin ">let's go</a></div>
         </div>
 
       </div>
@@ -164,17 +162,27 @@
           <div class="col-lg-6 order-2 order-lg-1 content">
             <h3>Wellcome to Mustfa Fundation</h3>
             <p class="fst-italic">
-              At Mustfa Fundation, we are dedicated to helping individuals find their perfect life partner. Our platform is designed to connect people based on shared values, interests, and cultural backgrounds. We believe that finding a soulmate should be a meaningful journey, and we are here to guide you every step of the way.
+              At Mustfa Fundation, we are dedicated to helping individuals find their perfect life partner. Our platform
+              is designed to connect people based on shared values, interests, and cultural backgrounds. We believe that
+              finding a soulmate should be a meaningful journey, and we are here to guide you every step of the way.
             </p>
             <h4>Our Commitment</h4>
             <ul>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Personalized Matches:</strong>We provide tailored recommendations to ensure you're connected with people who share similar life goals and beliefs.</span>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Personalized Matches:</strong>We provide tailored
+                  recommendations to ensure you're connected with people who share similar life goals and
+                  beliefs.</span>
               </li>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Trust and Security:</strong>Your privacy is our priority. We take great care to protect your data and ensure a safe and secure platform for all.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span><strong>Empowering Connections:</strong>Through our advanced algorithms, we bring together people who are serious about building meaningful relationships.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Trust and Security:</strong>Your privacy is our
+                  priority. We take great care to protect your data and ensure a safe and secure platform for
+                  all.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><strong>Empowering Connections:</strong>Through our advanced
+                  algorithms, we bring together people who are serious about building meaningful relationships.</span>
+              </li>
             </ul>
             <p>
-              At Mustfa Foundation, we are more than just a matchmaking service. We aim to create a platform that fosters long-lasting relationships based on trust, respect, and compatibility. Join us today and start your journey toward finding your life partner.
+              At Mustfa Foundation, we are more than just a matchmaking service. We aim to create a platform that
+              fosters long-lasting relationships based on trust, respect, and compatibility. Join us today and start
+              your journey toward finding your life partner.
             </p>
           </div>
         </div>
@@ -197,7 +205,8 @@
               <i class="bi bi-heart flex-shrink-0"></i>
               <div>
                 <h4>Personalized Matchmaking</h4>
-                <p>We understand that everyone is unique. Our system tailors matches based on your preferences, helping you find the perfect partner who shares your values and aspirations.</p>
+                <p>We understand that everyone is unique. Our system tailors matches based on your preferences, helping
+                  you find the perfect partner who shares your values and aspirations.</p>
               </div>
             </div><!-- End Features Item-->
 
@@ -205,7 +214,8 @@
               <i class="bi bi-shield-lock flex-shrink-0"></i>
               <div>
                 <h4>Secure and Confidential</h4>
-                <p>Your privacy is of utmost importance to us. We use advanced security measures to ensure your data and personal details remain protected and confidential.</p>
+                <p>Your privacy is of utmost importance to us. We use advanced security measures to ensure your data and
+                  personal details remain protected and confidential.</p>
               </div>
             </div><!-- End Features Item-->
 
@@ -213,7 +223,8 @@
               <i class="bi bi-check-circle flex-shrink-0"></i>
               <div>
                 <h4>Trusted Platform</h4>
-                <p>Join a growing community of like-minded individuals. We focus on providing a safe and trusted environment where genuine connections can thrive.</p>
+                <p>Join a growing community of like-minded individuals. We focus on providing a safe and trusted
+                  environment where genuine connections can thrive.</p>
               </div>
             </div><!-- End Features Item-->
 
@@ -221,7 +232,8 @@
               <i class="bi bi-headset flex-shrink-0"></i>
               <div>
                 <h4>Dedicated Support</h4>
-                <p>Our support team is here to assist you every step of the way, ensuring a smooth and fulfilling experience on your journey to finding your life partner.</p>
+                <p>Our support team is here to assist you every step of the way, ensuring a smooth and fulfilling
+                  experience on your journey to finding your life partner.</p>
               </div>
             </div><!-- End Features Item-->
 
@@ -522,6 +534,52 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <!-- modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="modalLoginContent"> <!-- Wrapper for Login Content -->
+          <form id="loginForm" method="POST" action="">
+            <div class="form-group">
+              <label for="inputEmail" class="mb-1">Email address</label>
+              <input type="email" class="form-control mb-3" id="inputEmail" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="mb-1">Password</label>
+              <input type="password" class="form-control mb-3" id="inputPassword" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" id="loginBtnF">Login</button>
+            <p>Don't have an account? <a href="#" id="openSignUp">SignUp</a></p>
+          </form>
+        </div>
+        <div id="modalSignUpContent" style="display:none;"> <!-- Wrapper for SignUp Content -->
+          <form id="signUpForm" method="POST" action="">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control my-3" id="name" name="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email address</label>
+              <input type="email" class="form-control my-3" id="inputEmail" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="inputPassword">Password</label>
+              <input type="password" class="form-control my-3" id="inputPassword" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" id="signUpBtnF">SignUp</button>
+            <p>Already have an account? <a href="#" id="backToLogin">Login</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -534,7 +592,42 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 </body>
 
 </html>
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<!-- <div class="modal fade" id="loginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+  aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">
+          Login
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" method="POST" action="{{ url('custom-login') }}">
+          <div class="form-group">
+            <label for="inputEmail" class="mb-1">Email address</label>
+            <input type="email" class="form-control mb-3" id="inputEmail" name='email' placeholder="Enter email">
+
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="mb-1">Password</label>
+            <input type="password" class="form-control mb-3" id="inputPassword" name="password" placeholder="Password">
+
+          </div>
+          <button type="submit" class="btn btn-primary mb-2" id="loginBtnF">Login</button>
+          <p>Don't have an account? <a href="" data-toggle="modal" data-target="#modalSignup">signUp</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
